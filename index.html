@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+#bj{
+	width:1660px;
+	height:900px;
+	transition:all 0.8s;
+}
+.yuan{
+	position:absolute;
+	top:47%;
+	left:47%;
+	border:#FFF 5px solid;
+	border-radius:50%;
+	box-shadow: 2px 2px 2px #000;
+	position:absolute;
+	width:50px;
+	height:50px;
+	transform-origin:0% 230%; 
+	transition:all 0.5s;
+}
+#da{
+	border:#FFF 5px solid;
+	background:#e169c3;
+	border-radius:50%;
+	box-shadow: 5px 4px 5px #888888;
+	position:absolute;
+	top:45%;
+	left:45%;
+	width:100px;
+	height:100px;
+	z-index:5;
+	transition:all 0.8s;
+}
+
+#da:hover{
+	
+}
+</style>
+<script>
+var aa=0
+var conter=0
+function q()
+{
+	if(conter==0)
+	{
+		for(i=1;i<=10;i++)
+		{
+			document.getElementById("y"+i).style.left="48.5%"
+			document.getElementById("y"+i).style.top="36%"
+			if(i==10)
+			{
+				setTimeout(function(){z()},500)
+			}
+		}
+	}
+	
+	if(conter==1)
+	{
+		for(i=1;i<=10;i++)
+		{
+			document.getElementById("y"+i).style.transform="rotate(0deg)"
+			setTimeout(function(){ssss()},500)
+			conter=0;
+			aa=0
+		}
+	}
+	
+}
+function ssss()
+{
+	for(i=1;i<=10;i++)
+	{
+		document.getElementById("y"+i).style.left="47%";document.getElementById("y"+i).style.top="47%";
+	}
+}
+function z()
+{
+		for(i=1;i<=10;i++)
+{
+	document.getElementById("y"+i).style.transform="rotate("+aa+"deg)"
+		aa=aa+36;
+}
+conter=1;
+}
+function ys(as)
+{
+	document.getElementById("bj").style.background=as;
+	document.getElementById("da").style.background=as;
+}
+</script>
+</head>
+
+<body>
+<div id="bj"></div>
+<div id="da" onclick="q()"></div>
+<div id="y1" style="background:#e169c3" class="yuan" onclick="ys(this.style.background)"></div>
+<div id="y2" style="background:#b569e1" class="yuan" onclick="ys(this.style.background)"></div>
+<div id="y3" style="background:#7169e1" class="yuan" onclick="ys(this.style.background)"></div>
+<div id="y4" style="background:#69b8e1" class="yuan" onclick="ys(this.style.background)"></div>
+<div id="y5" style="background:#69e1d4" class="yuan" onclick="ys(this.style.background)"></div>
+<div id="y6" style="background:#6ce169" class="yuan" onclick="ys(this.style.background)"></div>
+<div id="y7" style="background:#bee169" class="yuan" onclick="ys(this.style.background)"></div>
+<div id="y8" style="background:#e1a169" class="yuan" onclick="ys(this.style.background)"></div>
+<div id="y9" style="background:#83091d" class="yuan" onclick="ys(this.style.background)"></div>
+<div id="y10" style="background:#09C" class="yuan" onclick="ys(this.style.background)"></div>
+</body>
+</html>
